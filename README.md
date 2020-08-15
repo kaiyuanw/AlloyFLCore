@@ -42,3 +42,7 @@ The script also allows users to run AlloyFLUn, AlloyFLCo, AlloyFLMu
 independently.
 
 The results are stored as eff.info in the experiments/ directory.
+
+# License
+
+MIT License, see `LICENSE` for more information.
