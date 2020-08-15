@@ -5,15 +5,10 @@
 Visitor Pattern to manipulate Alloy AST nodes.  The following tools
 are built using `AlloyParser` API:
 
-## mualloy
+## AlloyFLCore
 
-`mualloy` is a tool that supports mutation testing for Alloy models.
-The tool is under mualloy package.
-
-## alloyfl
-
-`alloyfl` is a tool that helps localize faults in Alloy models given
-tests.  The tool is under alloyfl package.
+`AlloyFLCore` is a tool that helps localize faults in Alloy models given tests.
+The tool is built on top of AlloyParser and under alloyfl package.
 
 # Requirements:
 
@@ -31,3 +26,19 @@ tests.  The tool is under alloyfl package.
     bit native library if you use minisat solver.
   - libstdc++.so.5: `sudo apt-get install libstdc++5 libstdc++5:i386`.
     Must be installed if you use minisat solver.
+
+# Reproduce Experiment:
+
+ * Run `./aparser.sh --build` to build the library
+ * Run `./aparser.sh --prepare-all` to store real fault locations and copy
+   faulty models into working directory.
+ * Run `./aparser.sh --hybridfl-average-all
+   experiments/test-suite/mutation-based/100 ochiai 0.4` to run AlloyFLHy with
+   all (100%) tests using Ochiai formula and (0.4 * AlloyFLMu + 0.6 * AlloyFLCo)
+ * Run `./aparser.sh --report-hybridfl-average-all 100 ochiai 0.4` to collect
+   distance-based and top-k metrics for AlloyFLHy given the above setting
+
+The script also allows users to run AlloyFLUn, AlloyFLCo, AlloyFLMu
+independently.
+
+The results are stored as eff.info in the experiments/ directory.
