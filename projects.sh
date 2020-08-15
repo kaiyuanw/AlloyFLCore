@@ -17,7 +17,6 @@ COVERAGE_FL="coveragefl"
 UNSAT_FL="unsatfl"
 MUTATION_FL="mutationfl"
 HYBRID_FL="hybridfl"
-SAMPLE_SIZE="500"
 
 AVERAGE="average"
 
