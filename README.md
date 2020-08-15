@@ -43,6 +43,10 @@ independently.
 
 The results are stored as eff.info in the experiments/ directory.
 
+# Publications
+* "Fault Localization for Declarative Models in Alloy."
+    Kaiyuan Wang, Allison Sullivan, Darko Marinov, and Sarfraz Khurshid, ISSRE 2020
+
 # License
 
 MIT License, see `LICENSE` for more information.
